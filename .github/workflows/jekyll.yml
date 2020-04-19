@@ -1,4 +1,6 @@
-name: Jekyll site CI
+name: Jekyll site CI - Onalia GraphQL
+url: onalia.github.io
+baseurl: /graphql
 
 on:
   push:
@@ -18,3 +20,5 @@ jobs:
         docker run \
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
         jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future"
+    - run: npm install
+    - run: ng deploy --base-href="graphql/" --repo=https://github.com/onalia/graphql

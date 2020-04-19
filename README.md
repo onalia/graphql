@@ -30,3 +30,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 # Deploy
 
 https://github.com/angular-schule/angular-cli-ghpages#quickstart-local
+```
+ng deploy --base-href="graphql/" --repo=https://github.com/onalia/graphql
+```
