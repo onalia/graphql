@@ -1,6 +1,4 @@
 name: Jekyll site CI - Onalia GraphQL
-url: onalia.github.io
-baseurl: /graphql
 
 on:
   push:
