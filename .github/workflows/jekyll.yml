@@ -1,22 +1,23 @@
-name: Jekyll site CI - Onalia GraphQL
 
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+# name: Jekyll site CI - Onalia GraphQL
 
-jobs:
-  build:
+# on:
+#   push:
+#     branches: [ master ]
+#   pull_request:
+#     branches: [ master ]
 
-    runs-on: ubuntu-latest
+# jobs:
+#   build:
 
-    steps:
-    - uses: actions/checkout@v2
-    - name: Build the site in the jekyll/builder container
-      run: |
-        docker run \
-        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future"
-    - run: npm install
-    - run: npm run deploy
+#     runs-on: ubuntu-latest
+
+#     steps:
+#     - uses: actions/checkout@v2
+#     - name: Build the site in the jekyll/builder container
+#       run: |
+#         docker run \
+#         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
+#         jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future"
+#     - run: npm install
+#     - run: npm run deploy
