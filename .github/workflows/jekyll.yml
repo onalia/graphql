@@ -19,4 +19,4 @@ jobs:
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
         jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future"
     - run: npm install
-    - run: ng deploy --base-href="graphql/" --repo=https://github.com/onalia/graphql
+    - run: npm run deploy
